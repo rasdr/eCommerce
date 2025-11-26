@@ -1,0 +1,16 @@
+services:
+  app:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+  db:
+    image: sqlserv
+    environment:
+      MYSQL_ROOT_PASSWORD: Passord123
+      MYSQL_DATABASE: tverr
+      
