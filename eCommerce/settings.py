@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-$7wi1%wk58dzg#btbc63n^skb!2oz2!$o@)jktb+4=npli91^5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -81,8 +81,12 @@ WSGI_APPLICATION = 'eCommerce.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'tverr',
+        'USER': 'bedrift',
+        'PASSWORD': 'Passord123',
+        'HOST': 'db',
+        'PORT': '3306',
     }
 }
 
