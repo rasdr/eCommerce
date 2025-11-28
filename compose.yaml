@@ -18,12 +18,8 @@ services:
       
   app:
     build: .
-<<<<<<< HEAD
     command: gunicorn --bind 0.0.0.0:8000 eCommerce.wsgi:application
    #command: python manage.py runserver 0.0.0.0:8000 bash -c "python manage.py collectstatic --noinput && 
-=======
-    command: python manage.py runserver 0.0.0.0:8000
->>>>>>> f216d30253b84de0c4c26a4d6320f20d26a98ec4
     volumes:
       - .:/usr/src/app
     ports:
@@ -31,7 +27,6 @@ services:
     depends_on:
         db:
          condition: service_healthy
-<<<<<<< HEAD
     #deploy:
     #  replicas: 2
       
@@ -42,9 +37,6 @@ services:
     depends_on:
       - app
 
-=======
-      
->>>>>>> f216d30253b84de0c4c26a4d6320f20d26a98ec4
       
 #    image: sqlserv
 #    environment:
